@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue練習</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>定渲染區</h1>
+    <div id="vue1">
+        {{ text }}
+
+        <h2>
+            {{ text }}
+        </h2>
+
+        <h4>
+            {{ a + b }}
+        </h4>
+    </div>
+
+    <h2>屬性寫在資料內</h2>
+    <div id="vue2">
+        <h2 v-bind:align="aligment">ratgoodgood</h2>
+        <a v-bind:href="unsplash">unsplash</a>
+    </div>
+
+    <h1>判斷式</h1>
+    <div id="vue3">
+        <p v-if="test">raygoodgood-段落文字</p>
+        <div v-if="test">區塊</div>
+
+        <h2>活動報名</h2>
+        <a href="#" v-if="activity">我要報名</a>
+        <span v-else="activity">報名結束</span>
+    </div>
+
+    <h1>迴圈</h1>
+    <div id="vue4">
+        <a href="#" v-for="n in 5">good {{ n }}</a>
+
+        <div v-for="p in products">
+            <h3>{{ p.name }}</h3>
+            <h4>price:{{ p.price }} H</h4>
+            <hr>
+        </div>
+    </div>    
+
+    <h1>bear</h1>
+    <div id="vue5">
+        <div>bear {{ count }} 瓶 
+        <span v-on:click="sub">-</span>
+        <span v-on:click="add">+</span>
+        </div>
+
+        <h1 v-on:click="show">rayygoodgood {{ p }}</h1>
+    
+    </div>
+
+    <div id="vue6">
+        <label>your name</label><input type="text" v-model="name">
+        <p> Hello,{{ name }}</p>
+    </div>
+  
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
