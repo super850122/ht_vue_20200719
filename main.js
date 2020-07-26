@@ -61,4 +61,45 @@ var vue6 = new Vue({
     data:{
         name:""
     }
+});
+
+// 定義元件
+// ("元件名稱" , {樣板:"元件內容"})
+Vue.component("test-a", {
+    template: "<h2>測試元件</h2>"
+});
+
+var vue7 = new Vue({
+    el:"#vue7"
+});
+
+
+Vue.component("vue-content",{
+    template:`<div>
+    <h3>標題3</h3>
+    <p>文字</p>
+    <hr>
+    </div>
+    `
+});
+
+var vue8 = new Vue({
+    el:"#vue8"
+});
+
+
+Vue.component("navbar" , {
+    template:`
+    <nav>
+        <a href="./about.html">關於</a>
+        <a href="#">作品集</a>
+        <a href="./indx.html">首頁</a>
+        <a href="#">最新消息</a>
+        <a href="#">聯絡我</a>
+    </nav>
+    `
+})
+
+var navbar = new Vue({
+    el:"#navbar"
 })

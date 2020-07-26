@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <div id="navbar">
+        <navbar></navbar>
+    </div>
+
+
     <h1>定渲染區</h1>
     <div id="vue1">
         {{ text }}
@@ -62,7 +67,20 @@
         <label>your name</label><input type="text" v-model="name">
         <p> Hello,{{ name }}</p>
     </div>
-  
+
+
+    <div id="vue7">
+        <test-a></test-a>
+        <test-a></test-a>
+        <test-a></test-a>
+    </div>
+
+    <div id="vue8">
+        <vue-content></vue-content>
+        <vue-content></vue-content>
+        <vue-content></vue-content>
+        <vue-content></vue-content>
+    </div>
 
 
 
